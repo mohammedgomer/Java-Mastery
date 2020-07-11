@@ -1,0 +1,6 @@
+package Day4;
+
+// An interface is a declaration of methods - Like a contract between you and the class
+public interface Tricks {
+
+}

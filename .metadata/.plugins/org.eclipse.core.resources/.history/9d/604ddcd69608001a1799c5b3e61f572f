@@ -1,0 +1,69 @@
+package Day4;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class BankController {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//BankAccount mo = new BankAccount(5, "Mo");
+//System.out.println(mo.getBalance());
+//
+//mo.deposit(100.49f);
+//System.out.println("new bal " + mo.getBalance());
+//
+//mo.withdraw(12.99f);
+//System.out.println("new bal: " + mo.getBalance());
+//
+//mo.withdraw(3000f);
+//System.out.println("new bal: " + mo.getBalance());
+
+
+	HashMap<Integer, BankAccount> bankOfMohammed = new HashMap();
+	
+	Scanner sc = new Scanner(System.in);
+	
+	
+	bankOfMohammed.put(1342, new BankAccount(100f, "Mohammed"));
+	bankOfMohammed.put(2189, new BankAccount(100f, "Iqra"));
+	bankOfMohammed.put(3424, new BankAccount(100f, "Adnan"));
+	bankOfMohammed.put(4632, new BankAccount(100f, "Kaleem"));
+	bankOfMohammed.put(6765, new BankAccount(100f, "Saffiyah"));
+	
+	System.out.println("Welcome to the bank of Mohammed");
+	System.out.println("Please enter your account number");
+	
+	int accNo = sc.nextInt();
+	
+	if(bankOfMohammed.containsKey(accNo)) {
+		BankAccount account = bankOfMohammed.get(accNo);
+			System.out.println("Hi there " + account.getName());
+			System.out.println("d = deposit");
+			System.out.println("w = withdraw");
+			System.out.println("e = exit");
+			
+			String option = sc.nextLine();
+			
+			switch(option) {
+			case "d": System.out.println("How much?");
+			float amount = sc.nextFloat();
+			sc.hasNextLine();
+			
+			account.deposit(amount);
+			break;
+			case "w": 
+				break;
+			case "e":
+				break;
+				default: 
+			}
+	} 
+	else {
+		System.out.println("The account number " + accNo+ " is invalid");
+	}
+
+	}
+
+}

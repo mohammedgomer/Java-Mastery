@@ -1,0 +1,46 @@
+import java.text.NumberFormat;
+import java.util.Scanner;
+
+public class MortgageCalculator {
+
+	public static void main(String[] args) {
+		
+		// Principle - Amount of loan we want to get 
+		
+		// Annual Interest Rate 
+		
+		// Period (Years) - Loan for 30 years 
+		
+		// Mortgage - Displays our monthly payments in currency
+		
+	Scanner sc = new Scanner(System.in);
+	
+	
+	System.out.println("Principle: ");
+	int principle = sc.nextInt();		
+	
+	System.out.println("Annual Interest Rate: ");
+	double interestRate = sc.nextDouble();
+	
+	System.out.println("Period (Years): ");
+	int period = sc.nextInt();		
+
+	double monthlyInterest = interestRate/100/12;
+	double n = period*12;
+	
+	double mortgage = principle * monthlyInterest * Math.pow(1+monthlyInterest, n)/Math.pow(1+monthlyInterest, n) -1;
+
+	
+	
+	
+	System.out.println(mortgage);
+	
+	
+	
+		
+		
+		
+		
+	}
+
+}

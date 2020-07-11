@@ -1,0 +1,13 @@
+package Day4;
+
+public class BankController {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+BankAccount mo = new BankAccount(5, "Mo");
+System.out.println(mo.getBalance());
+mo.deposit(100.49f);
+System.out.println(mo.getBalance());
+	}
+
+}

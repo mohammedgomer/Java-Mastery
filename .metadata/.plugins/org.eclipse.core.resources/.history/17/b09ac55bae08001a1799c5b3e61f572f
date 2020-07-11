@@ -1,0 +1,16 @@
+package Day4;
+
+public class PersonController {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Abstract classes don't let you create an object
+		// So you can't do Person p = new Person();
+		
+		Student s = new Student("Tom",1997, "Manc", 1234, "Comp Science");
+		s.introduceYourself();
+		
+	}
+
+}

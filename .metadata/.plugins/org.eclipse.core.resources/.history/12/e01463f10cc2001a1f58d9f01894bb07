@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class MortgageCalculator {
+
+	public static void main(String[] args) {
+		
+		int[]nums = new int[2];
+		nums[0] = 99;
+		nums[1] = 2020;
+		
+		Scanner sc = new Scanner(System.in);
+		//System.out.println(nums[1]);
+		
+		System.out.println(Arrays.toString(nums));
+	}
+
+}

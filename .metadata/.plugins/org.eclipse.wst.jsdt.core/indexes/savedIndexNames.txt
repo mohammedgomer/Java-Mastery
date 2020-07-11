@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/Gheta/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3733719205.index
+1666773813.index
+3147244880.index
+2525036709.index
+2301398703.index
+1035275864.index

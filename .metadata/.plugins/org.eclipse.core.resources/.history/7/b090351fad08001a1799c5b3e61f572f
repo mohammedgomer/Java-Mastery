@@ -1,0 +1,14 @@
+package Day4;
+
+public class Student extends Person {
+
+	private int id; 
+	private String course; 
+	
+	public Student(String name, int birthYear, String homeTown) {
+	super(name, birthYear, homeTown);
+	this.id = id;
+	this.course = course;
+	
+	}
+}

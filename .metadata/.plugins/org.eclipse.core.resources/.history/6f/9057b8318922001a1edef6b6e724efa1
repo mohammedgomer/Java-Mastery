@@ -1,0 +1,24 @@
+
+public class WhileLoops {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+	int number = 4;
+	int finishNumber = 20;
+	
+	while(number<=finishNumber) {
+		
+	}
+	
+	public static boolean isEvenNumber(int number) {
+		if (number % 2 == 0) {
+			return true;
+		}
+		return false;
+
+	}
+}

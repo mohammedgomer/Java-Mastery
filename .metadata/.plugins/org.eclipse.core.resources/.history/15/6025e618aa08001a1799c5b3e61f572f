@@ -1,0 +1,14 @@
+package Day4;
+
+public class AnimalController {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// Any class you see that is abstract you cannot create direct object of it - you have to extend or inherit it
+        //Animal fido = new Animal();
+		
+		Dog myDog = new Dog("Fido", 1);
+	}
+
+}

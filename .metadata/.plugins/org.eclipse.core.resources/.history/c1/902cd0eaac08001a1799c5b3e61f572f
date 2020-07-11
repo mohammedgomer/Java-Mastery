@@ -1,0 +1,11 @@
+package Day4;
+
+public class Student extends Person {
+
+	int id; 
+	String course; 
+	
+	public Student(String name, int birthYear, String homeTown) {
+	super(name, birthYear, homeTown);
+	}
+}

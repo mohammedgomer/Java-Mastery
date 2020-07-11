@@ -1,0 +1,15 @@
+import java.text.NumberFormat;
+
+public class MortgageCalculator {
+
+	public static void main(String[] args) {
+		
+		double dough = 1332433434.37;
+		
+		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		currency.format(dough);
+		
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+127.0.0.1 - - [01/Dec/2019:16:31:14 +0000] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [01/Dec/2019:16:31:17 +0000] "GET /dvd_web_app/GetDvdServlet HTTP/1.1" 200 2081
+127.0.0.1 - - [01/Dec/2019:17:08:08 +0000] "GET /dvdWebApp/APIServlet?apikey=123 HTTP/1.1" 404 1098
+127.0.0.1 - - [01/Dec/2019:17:12:48 +0000] "GET /dvdWebApp/APIServlet?apikey=abc123 HTTP/1.1" 404 1098
+127.0.0.1 - - [01/Dec/2019:17:14:26 +0000] "GET /dvdWebApp/APIServlet?apikey=abc123 HTTP/1.1" 404 1098
+0:0:0:0:0:0:0:1 - - [01/Dec/2019:17:15:55 +0000] "GET /dvd_web_app/APIServlet HTTP/1.1" 200 25
+0:0:0:0:0:0:0:1 - - [01/Dec/2019:17:16:18 +0000] "GET /dvd_web_app/APIServlet?apikey=abc123 HTTP/1.1" 200 260
+0:0:0:0:0:0:0:1 - - [01/Dec/2019:17:17:09 +0000] "GET /dvdWebApp/APIServlet?apikey=abc123 HTTP/1.1" 404 1098
+127.0.0.1 - - [01/Dec/2019:17:18:45 +0000] "GET /dvd_web_app/APIServlet?apikey=abc123 HTTP/1.1" 200 260

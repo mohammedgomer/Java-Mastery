@@ -1,0 +1,40 @@
+package Day4;
+
+public class BankAccount {
+	
+	float balance; 
+	String name;
+	
+	public BankAccount(float balance, String name) {
+		this.balance = balance;
+		this.name = name;
+	}
+	
+	public BankAccount() {
+		this.name = "Unknown T";
+		this.balance = 0;
+	}
+
+	public float getBalance() {
+		return balance;
+	}
+
+	public void setBalance(float balance) {
+		this.balance = balance;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void deposit(float amount) {
+		 this.balance +=amount;
+	}
+	public void withdraw(float amount) {
+		this.balance -=amount;
+	}
+}

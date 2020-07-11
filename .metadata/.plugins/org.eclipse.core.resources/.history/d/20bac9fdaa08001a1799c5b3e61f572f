@@ -1,0 +1,17 @@
+package Day4;
+
+public class Dog extends Animal {
+
+	public Dog(String name, int age) {
+		super(name, age);
+		// TODO Auto-generated constructor stub
+	}
+
+	// Overriding the Animal class behaviour of ("This animal does not make any
+	// noise") As dog does make a noise
+	@Override
+	public void makeNoise() {
+		System.out.println("WOOF");
+	}
+
+}

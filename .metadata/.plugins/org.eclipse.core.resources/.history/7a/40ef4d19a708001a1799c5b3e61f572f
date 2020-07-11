@@ -1,0 +1,119 @@
+package Day4;
+
+import java.util.HashMap;
+import java.util.Random;
+import java.util.Scanner;
+
+import Day3.Person;
+
+public class BankController {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+//BankAccount mo = new BankAccount(5, "Mo");
+//System.out.println(mo.getBalance());
+//
+//mo.deposit(100.49f);
+//System.out.println("new bal " + mo.getBalance());
+//
+//mo.withdraw(12.99f);
+//System.out.println("new bal: " + mo.getBalance());
+//
+//mo.withdraw(3000f);
+//System.out.println("new bal: " + mo.getBalance());
+
+		HashMap<Integer, BankAccount> bankOfMohammed = new HashMap();
+
+		Scanner sc = new Scanner(System.in);
+
+		bankOfMohammed.put(1342, new BankAccount(100f, "Mohammed"));
+		bankOfMohammed.put(2189, new BankAccount(100f, "Iqra"));
+		bankOfMohammed.put(3424, new BankAccount(100f, "Adnan"));
+		bankOfMohammed.put(4632, new BankAccount(100f, "Kaleem"));
+		bankOfMohammed.put(6765, new BankAccount(100f, "Saffiyah"));
+
+		while (true) {
+			System.out.println("Welcome to the bank of Mohammed");
+
+			System.out.println("Please select require service:");
+			System.out.println("1 = Enter account number");
+			System.out.println("2 = Create new account");
+
+			int choice = sc.nextInt();
+			sc.nextLine();
+
+			if (choice == 1) {
+				System.out.println("Please enter your account number");
+				// 1 for account number
+				// 2 for for new account
+
+				// if 1 then let user enter bank account number
+				// if 2 then let user create new account
+
+				int accNo = sc.nextInt();
+				sc.nextLine();
+				if (bankOfMohammed.containsKey(accNo)) {
+
+					bankLoop: while (true) {
+						BankAccount account = bankOfMohammed.get(accNo);
+						System.out.println("Hi there " + account.getName());
+						System.out.println("d = deposit");
+						System.out.println("w = withdraw");
+						System.out.println("e = exit");
+
+						String option = sc.nextLine();
+
+						float amount = 0;
+						switch (option) {
+						case "d":
+							System.out.println("How much?");
+							amount = sc.nextFloat();
+							sc.nextLine();
+							account.deposit(amount);
+							break;
+
+						case "w":
+							System.out.println("How much would you like to withdraw?");
+							amount = sc.nextFloat();
+							sc.nextLine();
+							account.withdraw(amount);
+							break;
+
+						case "e":
+							break bankLoop;
+
+						default:
+							System.out.println("Invalid option selected");
+							break;
+						}
+					}
+				} else {
+					System.out.println("The account number " + accNo + " is invalid");
+				}
+			} else {
+
+				Random rnd = new Random();
+
+				// 9999 add 1000 which is the upper bound which always guarantees a four digit
+
+				// number
+
+				System.out.println("Please enter your name: ");
+				String name = sc.nextLine();
+
+				System.out.println("How much would you like to deposit?");
+				int amount = sc.nextInt();
+
+				int num = rnd.nextInt(8999) + 1000;
+
+				BankAccount newAccount = new BankAccount();
+				bankOfMohammed.put(num, new BankAccount(amount, name));
+
+				System.out.println(name + " your pin is: " + num + " your balance is " + amount);
+			}
+		}
+
+	}
+
+}

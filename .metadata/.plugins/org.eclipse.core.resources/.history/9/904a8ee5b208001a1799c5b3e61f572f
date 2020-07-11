@@ -1,0 +1,24 @@
+package Day4;
+
+public class AnimalController {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Any class you see that is abstract you cannot create direct object of it -
+		// you have to extend or inherit it
+		// Animal fido = new Animal();
+
+		Dog dog1 = new Dog("Fido", 1);
+		Cat cat1 = new Cat("Billy", 3, "Tabby");
+		Goldfish goldfish1 = new Goldfish("John", 23);
+
+		dog1.makeNoise();
+		cat1.makeNoise();
+		goldfish1.makeNoise();
+
+		// Animal fido = new Dog("Fido", "23"); <-- polymorphism can't get confusing
+		// going to the root class Animal
+	}
+
+}

@@ -1,0 +1,19 @@
+package Day4;
+
+// sub class of animal 
+public class Cat extends Animal{
+
+	String breed; 
+	
+	public Cat(String name, int age, String breed) {
+		//  Referring to animal constructor
+		super(name, age);
+		this.breed = breed;
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void makeNoise() {
+		System.out.println("MEOW");
+	}
+}

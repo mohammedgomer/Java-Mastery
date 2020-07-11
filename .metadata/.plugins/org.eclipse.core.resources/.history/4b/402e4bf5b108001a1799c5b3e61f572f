@@ -1,0 +1,20 @@
+package Day4;
+
+// sub class of animal 
+public class Cat extends Animal {
+
+	// Made private because the breed is cat's variable and nobody else business - Instance variables should be private
+	private String breed;
+
+	public Cat(String name, int age, String breed) {
+		// Referring to animal constructor
+		super(name, age);
+		this.breed = breed;
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void makeNoise() {
+		System.out.println("MEOW");
+	}
+}

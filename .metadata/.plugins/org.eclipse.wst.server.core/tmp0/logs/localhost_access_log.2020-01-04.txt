@@ -1,0 +1,8 @@
+127.0.0.1 - - [04/Jan/2020:18:02:26 +0000] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [04/Jan/2020:18:02:28 +0000] "GET /SneakerWebApp/GetSneakerServlet HTTP/1.1" 200 1412
+0:0:0:0:0:0:0:1 - - [04/Jan/2020:18:02:33 +0000] "GET /SneakerWebApp/insert.html HTTP/1.1" 200 791
+0:0:0:0:0:0:0:1 - - [04/Jan/2020:18:02:50 +0000] "POST /SneakerWebApp/InsertSneakerServlet HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [04/Jan/2020:18:02:50 +0000] "GET /SneakerWebApp/GetSneakerServlet HTTP/1.1" 200 1488
+0:0:0:0:0:0:0:1 - - [04/Jan/2020:18:03:02 +0000] "GET /SneakerWebApp/GetSneakerServlet HTTP/1.1" 200 1488
+127.0.0.1 - - [04/Jan/2020:19:01:33 +0000] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [04/Jan/2020:19:01:33 +0000] "GET /SneakerWebApp/GetSneakerServlet HTTP/1.1" 200 1488

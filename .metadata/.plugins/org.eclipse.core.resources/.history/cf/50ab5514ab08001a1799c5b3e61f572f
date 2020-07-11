@@ -1,0 +1,18 @@
+package Day4;
+
+public class Dog extends Animal {
+
+	public Dog(String name, int age) {
+		// Super makes it go back to the base class and use the method defined
+		super(name, age);
+		// TODO Auto-generated constructor stub
+	}
+
+	// Overriding the Animal class behaviour of ("This animal does not make any
+	// noise") As dog does make a noise
+	@Override
+	public void makeNoise() {
+		System.out.println(this.name + "WOOF");
+	}
+
+}

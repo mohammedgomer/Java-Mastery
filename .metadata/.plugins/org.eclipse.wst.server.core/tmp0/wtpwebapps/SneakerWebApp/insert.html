@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert a Sneaker</title>
+</head>
+<body>
+
+	<!-- The insert sneaker web page -->
+	<form action="./InsertSneakerServlet" method="POST">
+		<h1>Insert Sneaker</h1>
+		<!-- Forms for inserting a sneaker -->
+		<input type="text" name="shoe_name" placeholder="Sneaker name">
+		<input type="text" name="description" placeholder="Description">
+		<input type="text" name="colour" placeholder="Colour"> <input
+			type="text" name="release_date" placeholder="Release Date"> <input
+			type="text" name="price" placeholder="Price"> <input
+			type="submit">
+
+	</form>
+	<!-- Once a user hits submit and goes back, it will take them to the homepage-->
+	<a href="./GetSneakerServlet">Back</a>
+
+</body>
+</html>

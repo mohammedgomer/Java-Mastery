@@ -1,0 +1,33 @@
+package Day4;
+
+import java.util.HashMap;
+
+public class BankController {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//BankAccount mo = new BankAccount(5, "Mo");
+//System.out.println(mo.getBalance());
+//
+//mo.deposit(100.49f);
+//System.out.println("new bal " + mo.getBalance());
+//
+//mo.withdraw(12.99f);
+//System.out.println("new bal: " + mo.getBalance());
+//
+//mo.withdraw(3000f);
+//System.out.println("new bal: " + mo.getBalance());
+
+
+	HashMap<Integer, BankAccount> bankOfMohammed = new HashMap();
+	
+	bankOfMohammed.put(1342, new BankAccount(100f, "Mohammed"));
+	bankOfMohammed.put(2189, new BankAccount(100f, "Iqra"));
+	bankOfMohammed.put(3424, new BankAccount(100f, "Adnan"));
+	bankOfMohammed.put(4632, new BankAccount(100f, "Kaleem"));
+	bankOfMohammed.put(6765, new BankAccount(100f, "Saffiyah"));
+	
+	}
+
+}

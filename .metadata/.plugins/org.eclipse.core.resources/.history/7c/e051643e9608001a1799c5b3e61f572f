@@ -1,0 +1,58 @@
+package Day4;
+
+public class BankAccount {
+	
+	// Make these instance variables private so that the balance and name cannot be seen
+	private float balance; 
+	private String name;
+	
+	public BankAccount(float balance, String name) {
+		this.balance = balance;
+		this.name = name;
+	}
+	
+	public BankAccount() {
+		this.name = "Unknown T";
+		this.balance = 0;
+	}
+
+	public float getBalance() {
+		return balance;
+	}
+
+	public void setBalance(float balance) {
+		this.balance = balance;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void deposit(float amount) {
+		 this.balance +=amount;
+	}
+	public void withdraw(float amount) {
+		
+		if(checkValidWithdraw(amount)) {
+		this.balance -=amount;
+		}
+		else {
+			System.out.println("You do not have sufficient funds");
+		}
+	}
+	
+	private boolean checkValidWithdraw(float amount) {
+//		if(amount<=this.balance) {
+//			return true;
+//		} else {
+//			return false;
+//		}
+		
+		// Quicker way of doing the above
+		return amount <= this.balance;
+	}
+}
