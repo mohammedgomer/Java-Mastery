@@ -31,7 +31,6 @@
     <fullyQualifiedTypeName name="database.MyDAO"/>
     <fullyQualifiedTypeName name="model.Sneaker"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
     <fullyQualifiedTypeName name="com.jaunt.UserAgent"/>
     <fullyQualifiedTypeName name="com.jaunt.JauntException"/>
@@ -55,4 +54,5 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
 </qualifiedTypeNameHistroy>
