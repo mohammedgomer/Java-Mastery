@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="length"/>
+		<item key="selection" value="interestRate"/>
 		<list key="findhistory">
+			<item value="interestRate"/>
 			<item value="height"/>
 			<item value="width"/>
 			<item value="insert"/>

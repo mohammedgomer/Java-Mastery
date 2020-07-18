@@ -3,6 +3,10 @@ import java.util.Scanner;
 
 public class MortgageCalculator {
 
+	// Constants - As months in a year and percentage never change
+	final static byte MONTHS_IN_YEAR = 12;
+	final static byte PERCENT = 100;
+
 	public static void main(String[] args) {
 
 		// Scanner to get user input
@@ -14,6 +18,12 @@ public class MortgageCalculator {
 
 		int period = (int) readNumber("Period (Years): ", 1, 30);
 
+		printMortgage(principle, interestRate, period);
+		printPaymentSchedule(principle, interestRate, period);
+
+	}
+
+	private static void printMortgage(int principle, double interestRate, int period) {
 		double mortgage = calculateMortgage(principle, interestRate, period);
 
 		// Formatting the mortgage value into currency so that it is readable, method
@@ -23,10 +33,17 @@ public class MortgageCalculator {
 		System.out.println("--------");
 		String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
 		System.out.println("Monthly Payments: " + mortgageFormatted);
+	}
+
+	private static void printPaymentSchedule(int principle, double interestRate, int period) {
 		System.out.println();
 		System.out.println("PAYMENT SCHEDULE");
 		System.out.println("----------------");
 
+		for (short month = 1; month <= period * MONTHS_IN_YEAR; month++) {
+			double balance = calculateBalance(principle, interestRate, period, month);
+			System.out.println(NumberFormat.getCurrencyInstance().format(balance));
+		}
 	}
 
 	public static double readNumber(String prompt, double min, double max) {
@@ -45,14 +62,22 @@ public class MortgageCalculator {
 
 //	double monthlyInterest = 0;
 
-//	public static double paymentSchedule(int principle, double monthlyInterest, short n, int numberOfPaymentsMade) {
-//		return 1.5;
-//	}
+	public static double calculateBalance(int principle, double interestRate, int period, short numberOfPaymentsMade) {
+		// Calculating payment schedule
+		// Calculating the monthly interest rate
+		double monthlyInterest = interestRate / PERCENT / MONTHS_IN_YEAR;
+		// Calculating number of payment made over months
+		short n = (short) (period * MONTHS_IN_YEAR);
+
+		double balance = principle
+				* (Math.pow(1 + monthlyInterest, n) - Math.pow(1 + monthlyInterest, numberOfPaymentsMade))
+				/ (Math.pow(1 + monthlyInterest, n) - 1);
+
+		return balance;
+	}
 
 	public static double calculateMortgage(int principle, double interestRate, int period) {
-		// Constants - As months in a year and percentage never change
-		final byte MONTHS_IN_YEAR = 12;
-		final byte PERCENT = 100;
+
 		// Calculating the monthly interest rate
 		double monthlyInterest = interestRate / PERCENT / MONTHS_IN_YEAR;
 		// Calculating number of payment made over months
@@ -62,12 +87,7 @@ public class MortgageCalculator {
 		double mortgage = principle * (monthlyInterest * Math.pow(1 + monthlyInterest, n))
 				/ (Math.pow(1 + monthlyInterest, n) - 1);
 
-		// Calculating payment schedule
-		int numberOfPaymentsMade = 1;
-		double paymentSchedule = principle * (Math.pow(1 + monthlyInterest, n))
-				- (Math.pow(1 + monthlyInterest, numberOfPaymentsMade)) / (Math.pow(1 + monthlyInterest, n) - 1);
-		
-	return mortgage;
+		return mortgage;
 	}
 
 }

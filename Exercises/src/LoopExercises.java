@@ -28,13 +28,13 @@ public class LoopExercises {
 //		System.out.println(j);
 //	}
 
-		// Exercise 3 
-		// * * * 
-		// * * * 
-		// * * * * * * * * * 
-		// * * * * * * * * * 
-		// * * * 
-		// * * * 
+		// Exercise 3
+		// * * *
+		// * * *
+		// * * * * * * * * *
+		// * * * * * * * * *
+		// * * *
+		// * * *
 //		for (int j = 0; j < 6; j++) {
 //			if(j==2 || j ==3) {
 //				for(int k = 0; k < 9; k++) {
@@ -49,8 +49,7 @@ public class LoopExercises {
 //			}
 //			System.out.println();
 //		}
-	
-		
+
 		// NOT SOLVED
 //		char[] myChar = {'A', 'B', 'C'};
 //		
@@ -60,7 +59,40 @@ public class LoopExercises {
 //			}
 //			System.out.println();
 //		}
+
+		// EXERCISE 5
+
 		
+		while (true) {
+			
+			Scanner sc = new Scanner(System.in);
+			int option = sc.nextInt();
+			System.out.println("-------Vending Machine-------");
+			System.out.println("[1] Get Gum");
+			System.out.println("[2] Get Chocolate");
+			System.out.println("[3] Get Popcorn");
+			System.out.println("[4] Get Juice");
+			System.out.println("[5] Display Total Sold So Far");
+			System.out.println("[6] Quit");
+			switch (option) {
+			case 1:
+				System.out.println("Here is your gum");
+				continue;
+			case 2:
+				System.out.println("Here is your chocolate");
+				break;
+			case 3:
+				System.out.println("Here is your popcorn");
+				break;
+			case 4:
+				System.out.println("Here is your juice");
+			default:
+				System.out.println("Error, options 1-6 only!");
+
+				// case 5: System.out.println();
+			}
+		}
+
 	}
 
 }
