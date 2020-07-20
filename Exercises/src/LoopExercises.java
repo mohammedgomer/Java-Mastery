@@ -61,12 +61,10 @@ public class LoopExercises {
 //		}
 
 		// EXERCISE 5
-
-		
+		int[] counter = {0,0,0,0};
 		while (true) {
-			
-			Scanner sc = new Scanner(System.in);
-			int option = sc.nextInt();
+
+			String[] items = { "Gum", "Chocolate", "Popcorn", "Juice" };
 			System.out.println("-------Vending Machine-------");
 			System.out.println("[1] Get Gum");
 			System.out.println("[2] Get Chocolate");
@@ -74,25 +72,52 @@ public class LoopExercises {
 			System.out.println("[4] Get Juice");
 			System.out.println("[5] Display Total Sold So Far");
 			System.out.println("[6] Quit");
-			switch (option) {
-			case 1:
-				System.out.println("Here is your gum");
-				continue;
-			case 2:
-				System.out.println("Here is your chocolate");
+
+			Scanner sc = new Scanner(System.in);
+			int option = Integer.parseInt(sc.nextLine());
+
+			if (option == 6) {
 				break;
+			}
+
+
+			String word = "";
+			switch (option) {
+
+			case 1:
+				word = "gum";
+				counter[0]+=1;
+				break;
+			case 2:
+				word = "chocolate";
+				counter[1]+=1;
+				break;
+				
 			case 3:
-				System.out.println("Here is your popcorn");
+				word = "popcorn";	
+				counter[2]+=1;
 				break;
 			case 4:
-				System.out.println("Here is your juice");
+				word = "juice";
+				counter[3]+=1;
+				break;
+
+			case 5:
+				for (int i = 0; i < items.length; i++) {
+					System.out.println(counter[i] + " items of " + items[i] + " sold");
+				}
+				break;
+
 			default:
 				System.out.println("Error, options 1-6 only!");
-
-				// case 5: System.out.println();
 			}
+			
+			System.out.println("Here is your " + word);
+			
+
 		}
 
+	
 	}
 
 }
