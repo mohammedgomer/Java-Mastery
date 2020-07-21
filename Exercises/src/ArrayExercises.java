@@ -19,10 +19,7 @@ public class ArrayExercises {
 
 	
 	public int sum3(int[] nums) {
-		  if(nums.length==2) {
-			 int result = nums[0] + nums[1] + nums[2];
-		  }
-		  return result;
+		 return nums[0] + nums[1] + nums[2];
 	}
 	
 //	public boolean firstLast6(int[] nums) {
