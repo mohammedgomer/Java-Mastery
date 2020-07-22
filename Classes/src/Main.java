@@ -17,7 +17,7 @@ public class Main {
 //		System.out.println(textBox2.text);
 		
 		var browser = new Browser();
-		browser.
+		browser.navigate("1");
 	}
 
 }
