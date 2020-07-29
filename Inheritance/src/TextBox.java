@@ -5,12 +5,14 @@ public class TextBox extends UIControl {
 
 	private String text = "";
 	
-	public TextBox() {
-		// Calls constructor of base class
-		// Has to be first statement inside constructor
-		super(true);
-		System.out.println("TextBox");
-	} 
+//	public TextBox() {
+//		// Calls constructor of base class
+//		// Has to be first statement inside constructor
+//		super(true);
+//		System.out.println("TextBox");
+//	} 
+	
+	
 	
 	// Overriding toString to print text not address 
 	// @Override is an annotation 
@@ -21,6 +23,13 @@ public class TextBox extends UIControl {
 	@Override
 	public String toString() {
 		return text;
+	} 
+	
+
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
+		System.out.println("Render TextBox");
 	}
 
 	public void setText(String text) {
@@ -30,5 +39,8 @@ public class TextBox extends UIControl {
 	public void clear() {
 		text = "";
 	}
+	
+	
+	
 
 }
