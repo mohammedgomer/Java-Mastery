@@ -7,7 +7,12 @@ public class Main {
 		video.setTitle("Jennifer's Birthday");
 		video.setUser(new User("john@outlook.com"));
 		
-		var processor = new VideoProcessor();
+		// Need to pass concrete implementation as dependencies
+		var processor = new VideoProcessor(
+				new VideoEncoder(),
+				new VideoDatabase(),
+				new EmailService()
+				);
 		processor.process(video);
 
 	}

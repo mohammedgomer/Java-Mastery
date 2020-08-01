@@ -1,13 +1,22 @@
 
 public class VideoProcessor {
-public void process(Video video) {
-	var encoder = new VideoEncoder();
-	encoder.encode(video);
-	
-	var database = new VideoDataBase();
-	database.store(video);
-	
-	var emailService = new EmailService();
-	emailService.sendEmail(video.getUser());
-}
+	public VideoProcessor(IVideoEncoder encoder, VideoDatabase database, IEmailService emailService) {
+		this.encoder = encoder;
+		this.database = database;
+		this.emailService = emailService;
+
+	}
+
+	private IVideoEncoder encoder;
+	private VideoDatabase database;
+	private IEmailService emailService;
+
+	public void process(Video video) {
+
+		// Not creating objects so out implementation is simplier and cleaner
+		
+		encoder.encode(video);
+		database.store(video);
+		emailService.sendEmail(video.getUser());
+	}
 }

@@ -2,7 +2,8 @@
 public class Video {
 	private String fileName;
 	private String title;
-	private User usr;
+	private User user;
+	
 	public String getFileName() {
 		return fileName;
 	}
@@ -15,11 +16,11 @@ public class Video {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public User getUsr() {
-		return usr;
+	public User getUser() {
+		return user;
 	}
-	public void setUsr(User usr) {
-		this.usr = usr;
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 	
