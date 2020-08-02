@@ -1,4 +1,5 @@
 
+
 public class VideoProcessor {
 	public VideoProcessor(IVideoEncoder encoder, VideoDatabase database, IEmailService emailService) {
 		this.encoder = encoder;
@@ -6,7 +7,6 @@ public class VideoProcessor {
 		this.emailService = emailService;
 
 	}
-
 	private IVideoEncoder encoder;
 	private VideoDatabase database;
 	private IEmailService emailService;
