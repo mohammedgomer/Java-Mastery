@@ -10812,3 +10812,43 @@ java.lang.NullPointerException
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.NullPointerException
+
+!ENTRY org.eclipse.ui 4 0 2020-08-03 01:28:41.534
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.ui 4 0 2020-08-03 01:28:41.539
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.ui 4 0 2020-08-03 01:28:41.542
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.ui 4 0 2020-08-03 01:28:41.544
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.ui 4 0 2020-08-03 12:34:38.277
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.ui 4 0 2020-08-03 12:34:38.281
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.ui 4 0 2020-08-03 12:34:38.283
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.ui 4 0 2020-08-03 12:34:38.285
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
