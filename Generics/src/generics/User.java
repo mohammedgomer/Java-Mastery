@@ -19,6 +19,11 @@ public class User implements Comparable<User> {
 		// If user has fewer points, result is going to be negative
 		return points - other.points;
 	}
+	
+	@Override 
+	public String toString() {
+		return "Points=" + points;
+	}
 
 
 }
