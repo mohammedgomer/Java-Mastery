@@ -26,7 +26,7 @@ public class Utils {
 	// CAPTURE class will extend User class, restricting from calling random
 	// unnecessary types - can only past User or subtypes of user
 	public static void printUsers(GenericList<? extends User> users) {
-		Object x = users.get(0);
+		User x = users.get(0);
 	}
 
 }
